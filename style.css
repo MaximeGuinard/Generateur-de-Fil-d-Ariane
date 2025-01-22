@@ -1,0 +1,136 @@
+:root {
+    --primary-color: #646cff;
+    --background-color: #ffffff;
+    --text-color: #213547;
+    --border-color: #e2e8f0;
+}
+
+body {
+    font-family: Inter, system-ui, Arial, sans-serif;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+    color: var(--text-color);
+    margin-bottom: 2rem;
+}
+
+.generator-form {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+}
+
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+}
+
+.preview {
+    margin: 2rem 0;
+    padding: 20px;
+    background-color: #f8fafc;
+    border-radius: 8px;
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+.breadcrumb .separator {
+    color: #94a3b8;
+}
+
+.code-output {
+    background-color: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+pre {
+    background-color: #1e293b;
+    color: #e2e8f0;
+    padding: 15px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+code {
+    font-family: monospace;
+    font-size: 14px;
+}
+
+.tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.tab-button {
+    background-color: #e2e8f0;
+    color: var(--text-color);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.hidden {
+    display: none;
+}

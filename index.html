@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Générateur de Fil d'Ariane</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Générateur de Fil d'Ariane</h1>
+        
+        <div class="generator-form">
+            <div class="input-group">
+                <input type="text" id="pageTitle" placeholder="Titre de la page">
+                <input type="text" id="pageUrl" placeholder="URL de la page">
+                <button onclick="addBreadcrumbItem()">Ajouter</button>
+            </div>
+
+            <div class="options">
+                <label>
+                    <input type="checkbox" id="useSlash" checked>
+                    Utiliser "/" comme séparateur
+                </label>
+                <label>
+                    <input type="checkbox" id="useHomeIcon" checked>
+                    Utiliser l'icône maison
+                </label>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-button active" onclick="switchTab('html')">Code HTML</button>
+            <button class="tab-button" onclick="switchTab('schema')">Données Structurées</button>
+        </div>
+
+        <div class="preview">
+            <h2>Aperçu</h2>
+            <nav class="breadcrumb" id="previewBreadcrumb">
+                <a href="/">Accueil</a>
+            </nav>
+        </div>
+
+        <div class="code-output" id="htmlOutput">
+            <h2>Code HTML</h2>
+            <pre><code id="codeOutput"></code></pre>
+            <button onclick="copyCode('codeOutput')">Copier le code</button>
+        </div>
+
+        <div class="code-output hidden" id="schemaOutput">
+            <h2>Données Structurées (Schema.org)</h2>
+            <pre><code id="schemaCodeOutput"></code></pre>
+            <button onclick="copyCode('schemaCodeOutput')">Copier le code</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
